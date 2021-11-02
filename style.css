@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700&display=swap');
+
+:root {
+    --red: hsl(0, 100%, 74%);
+    --green: hsl(154, 59%, 51%);
+    --blue: hsl(248, 32%, 49%);
+    --darkBlue: hsl(249, 10%, 26%);
+    --grayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 80%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--red);
+    background-image: url(images/bg-intro-mobile.png);
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+.container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.text-content {
+    color: white;
+}
+
+.text-content h2 {
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.text-content p {
+    padding-bottom: 70px;
+    text-align: center;
+    font-weight: 200;
+}
+
+.top-content-form {
+    background-color: var(--blue);
+    height: 90px;
+    width: 330px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.top-content-form p {
+    color: white;
+    width: 150px;
+    margin: auto;
+    font-weight: 600;
+    font-size: 13px;
+    padding-top: 25px;
+}
+
+.top-content-form p span {
+    font-weight: 200;
+}
+
+form {
+    background-color: white;
+    height: 540px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    position: relative;
+}
+
+input {
+    height: 55px;
+    width: 280px;
+    border-radius: 10px;
+    border-width: thin;
+    margin-top: 25px;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--darkBlue);
+}
+
+.error-icon, .error-msg {
+    display: none;
+}
+
+.error-icon-fname {
+    top: 9%;
+}
+
+.error-icon-pword {
+    bottom: 35%;
+}
+
+.error-icon-email {
+      top: 42%;
+}
+
+.error-icon-lname {
+    top: 26%;
+}
+
+button {
+    cursor: pointer;
+    width: 280px;
+    height: 60px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-color: var(--green);
+    background-color: var(--green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.last-content {
+    color: var(--grayishBlue);
+    font-size: 12px;
+    width: 300px;
+    padding-top: 10px;
+    margin: auto;
+    line-height: 19.2px;
+}
+.last-content span {
+    color: var(--red);
+    font-weight: 600;
+}
+
+button:hover {
+   background-color:hsla(154, 59%, 51%,0.6)
+}
+
+.error-icon {
+   position: absolute;
+   left: 80%;
+}
+
+
+.error-msg {
+    margin-left: 70px;
+    color: var(--red);
+    font-style: italic;
+    font-size: 13px;
+}
+
+.error-icon-firstname #fname, .error-icon-lastname #lname, .error-icon-e-mail #email, .error-icon-password #password {
+    border: 1px solid var(--red);
+
+}
+
+.error-icon-firstname .error-icon-fname,.error-icon-firstname .error-msg-fname{
+    display: block;
+}
+
+.error-icon-lastname .error-icon-lname,.error-icon-lastname .error-msg-lname{
+    display: block;
+}
+
+.error-icon-e-mail .error-icon-email,.error-icon-e-mail .error-msg-email {
+    display: block;
+}
+
+.error-icon-password .error-icon-pword,.error-icon-password .error-msg-pword {
+    display: block;
+}
+
+
+@media only screen and (max-width: 360px) {
+    form {
+        width: 330px;
+        height: 480px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.text-content {
+    margin: auto;
+    font-size: 25px;
+}
+
+.text-content h2 {
+    width: 400px;
+}
+.text-content p {
+    width: 450px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+form {
+    width: 500px;
+    margin-left: 50px;
+}
+
+.top-content-form{
+    width: 500px;
+    margin-left: 50px;
+    margin-right: 4rem;
+}
+
+input {
+    width: 400px;
+}
+
+button {
+    width: 400px;
+}
+
+.error-msg {
+    margin-left: 200px;
+
+} 
+
+}
